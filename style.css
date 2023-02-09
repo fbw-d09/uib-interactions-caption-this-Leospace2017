@@ -1,0 +1,68 @@
+:root
+{
+    margin: 0;
+    box-sizing: border-box;
+}
+figure
+{
+    margin: 50px auto;
+    width: 340px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+
+}
+.text
+{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    background-color: rgba(128, 128, 128, 0.77);
+    visibility: hidden;
+    transition: background 1s ease .8s;
+
+}
+.text h1
+{
+    font-size: 1rem;
+}
+.text p
+{
+    font-size: 0.8rem;
+    text-decoration-line: none;
+}
+[contenteditable = "true"]:focus
+{
+    text-decoration: none;
+}
+
+figcaption
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 1s ease;
+    /* Picture */
+    background-image: url(./images/image.png);
+    background-size: cover;
+    background-position: center;
+
+
+}
+
+figure:hover figcaption
+{
+    transform: rotate(0.07turn)
+    scale(1.3);
+}
+
+figure:hover .text
+{
+   visibility: visible;
+}
